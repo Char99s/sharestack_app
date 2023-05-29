@@ -28,6 +28,7 @@ const UserProfile = () => {
       .then((data) => {
         setUser(data[0])
       })
+    return () => { };
 
   }, [userId])
 
@@ -51,6 +52,7 @@ const UserProfile = () => {
           setPins(data)
         })
     }
+    return () => { };
   }, [text, userId])
 
 

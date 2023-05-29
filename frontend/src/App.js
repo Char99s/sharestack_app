@@ -5,14 +5,16 @@ import Home from "./container/Home";
 import { fetchUser } from "./utils/fetchUser";
 
 const App = () => {
+
   const navigate = useNavigate()
 
   useEffect(() => {
     const user = fetchUser()
-
-    if(!user) navigate('/login')
+    if (!user) {
+      navigate('/login')
+    }
   }, [])
-  
+
 
   return (
     <Routes>
